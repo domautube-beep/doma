@@ -3,6 +3,14 @@ name: telegram-assistant
 description: 텔레그램으로 받은 메시지에 사용자의 현재 프로젝트 맥락과 메모리를 반영해서 답변한다. 빠른 작업 요청({회사명} 업무, DesignPilot, 메모/저장 요청), 현황 브리핑, Action Tracker 조회를 처리한다. '텔레그램 메시지', '텔레그램에서 온 거', '텔레그램 답장', '채널 메시지 처리' 같은 요청에 반드시 이 스킬을 사용할 것. 텔레그램 채널에서 메시지가 들어오면 자동으로 이 스킬을 참조하라.
 ---
 
+## 의존성
+
+| 의존성 | 종류 | 필수 여부 | 설명 |
+|--------|------|----------|------|
+| 텔레그램 MCP | MCP | 필수 | `plugin:telegram` — 메시지 수신/발신 (`reply`, `edit_message`, `react`, `download_attachment`) |
+| Obsidian Vault | 파일시스템 | 필수 | `{OBSIDIAN_VAULT}` 경로 — Action Tracker, projects-registry 조회용 |
+| Google Calendar MCP | MCP | 선택 | `/일정` 커맨드 사용 시 필요 (`gcal_list_events`) |
+
 ## 역할
 
 텔레그램으로 들어온 메시지를 사용자의 전체 맥락(프로젝트, 메모리, 현황)과 연결해서 처리한다. 단순 챗봇이 아닌, 컨텍스트가 있는 비서로 동작한다.

@@ -121,15 +121,15 @@ npm install -g @anthropic-ai/claude-code@latest
 7. /telegram:access-policy allowlist (보안 필수)
 ```
 
-### {USER} K-GEM 봇 재활용 시
+### 기존 봇 재활용 시
 
-K-GEM 텔레그램 봇이 아카이브 상태이지만 토큰은 재사용 가능하다.
+아카이브 상태의 텔레그램 봇 토큰은 재사용 가능하다.
 
 ```
-저장된 토큰: 8763420799:AAHaWgiuxt84xxB2jARpUswvZ5A3ulvXk_0
+BotFather에서 발급받은 토큰을 /telegram:config 명령에 사용한다.
 ```
 
-이 토큰을 `/telegram:config` 명령에 그대로 사용할 수 있다. 단, 봇이 아카이브 처리된 경우 BotFather에서 `/mybot` → 봇 선택 → 활성화 먼저 확인.
+봇이 아카이브 처리된 경우 BotFather에서 `/mybot` → 봇 선택 → 활성화 먼저 확인.
 
 ### 커스텀 채널 확장
 
@@ -225,7 +225,7 @@ cron-scheduler 스킬이 자동으로 처리한다.
 |------|------|
 | Remote Control (claude.ai/code 접속) | claude 실행 후 claude.ai/code 접속 |
 | Scheduled Tasks 등록 | Claude Code에서 자연어로 cron 요청 |
-| 텔레그램 봇으로 텔레그램 → Claude 명령 | claudeclaw 스킬로 K-GEM 봇 재활성화 |
+| 텔레그램 봇으로 텔레그램 → Claude 명령 | claudeclaw 스킬로 봇 재활성화 |
 
 ### 조건이 필요한 것
 
@@ -242,7 +242,7 @@ cron-scheduler 스킬이 자동으로 처리한다.
 [지금 구성]
 맥 (Claude Code 상시 실행)
 ├── Remote Control → 외출 시 모바일에서 이어받기
-├── Telegram Channels (claudeclaw로 K-GEM 봇 재활용)
+├── Telegram Channels (claudeclaw로 봇 재활용)
 │   └── 텔레그램 메시지 → Claude 즉시 실행
 └── Scheduled Tasks
     ├── 매일 07:30 아침 브리핑 (launchd → CronCreate 이전 가능)
@@ -259,7 +259,7 @@ cron-scheduler 스킬이 자동으로 처리한다.
 | 증상 | 확인 사항 |
 |------|----------|
 | claude.ai/code에 세션이 안 보임 | 맥에서 `claude`가 실행 중인지 확인 / 같은 Anthropic 계정인지 확인 |
-| 텔레그램 메시지가 Claude에 안 들어옴 | `plugin:channels telegram@claude-plugins/official` 다시 실행 / K-GEM 봇 활성화 상태 확인 |
+| 텔레그램 메시지가 Claude에 안 들어옴 | `plugin:channels telegram@claude-plugins/official` 다시 실행 / 봇 활성화 상태 확인 |
 | Channels 기능 없음 오류 | Team/Enterprise 플랜 확인 / `claude --version`으로 v2.1.80+ 확인 |
 | 크론 작업이 실행 안 됨 | `CronList`로 등록 확인 / Claude Code 세션이 켜져 있는지 확인 |
 

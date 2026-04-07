@@ -123,7 +123,7 @@ CEO: "요즘 어떻게 됐어?"
    - 결정 필요: 가격 정책 (월 9,900 vs 12,900)
 
    [포트폴리오]
-   - 배포 완료! URL: https://r3alson.vercel.app
+   - 배포 완료! URL: https://your-project.vercel.app
    - 그로스팀 마케팅 시작
    - SNS 반응: 긍정 72%
 
@@ -144,7 +144,7 @@ CEO: "포트폴리오 프로젝트 끝났어"
   "프로젝트 '포트폴리오'를 아카이브합니다.
 
    최종 현황:
-   - URL: https://r3alson.vercel.app
+   - URL: https://your-project.vercel.app
    - 총 소요: 2주
    - 팀 산출물: PRD, 코드, 보안 리포트, 성능 리포트
 

@@ -30,9 +30,9 @@ logger = logging.getLogger(__name__)
 - 한 함수 = 한 역할. 30줄 초과 시 분리 고려
 - 타입 힌트 사용: `def fetch_data(url: str, timeout: int = 10) -> dict:`
 
-### 4. K-GEM 주식 분석 프로젝트 특화 규칙
-- 주식 데이터 fetch 실패 시 → 재시도 3회, 간격 1초
-- 매매 신호 계산은 별도 함수로 분리 (`calculate_signal()`)
+### 4. 데이터 분석 프로젝트 특화 규칙
+- 외부 데이터 fetch 실패 시 → 재시도 3회, 간격 1초
+- 신호 계산은 별도 함수로 분리 (`calculate_signal()`)
 - Telegram 알림 함수는 `lib/telegram.py`에 모아두기
 - 데이터프레임 처리는 `pandas`, 시각화는 `matplotlib` 또는 `plotly` 사용
 - 날짜/시간은 `datetime` + KST 기준 (`timezone(timedelta(hours=9))`)

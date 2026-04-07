@@ -6,6 +6,12 @@ allowed-tools: Read, Write, Edit, Glob, Grep
 
 # Knowledge Sync (Obsidian 지식 동기화)
 
+## 의존성
+
+| 의존성 | 종류 | 필수 여부 | 설명 |
+|--------|------|----------|------|
+| Obsidian Vault | 파일시스템 | 필수 | `{OBSIDIAN_VAULT}` 경로 — `L1-Knowledge/Domains/`, `01-Pipe/` 폴더 존재해야 함 |
+
 대화 중 지식을 감지하거나 요청받으면 Obsidian vault에 자동 저장하고, 계층+자유 태그를 3개 이상 부여하여 연관 지식끼리 연결한다.
 
 ## 경로

@@ -1,0 +1,39 @@
+# DOMA Brain 설정
+version: "4.1"
+
+# 언어 설정
+language: "ko"  # ko, en
+
+# 스토리지 모드
+storage:
+  mode: "obsidian"  # obsidian, notion, local
+  obsidian:
+    vault_path: ""  # Obsidian Vault 절대 경로
+    google_drive: ""  # Google Drive 경로 (선택)
+  local:
+    base_path: "~/.doma"  # lite 모드 기본 경로
+
+# 에이전트 설정
+agents:
+  install: "all"  # all, minimal, custom
+  minimal:  # minimal 모드 시 설치할 에이전트
+    - pm
+    - code-builder
+    - frontend-dev
+    - backend-dev
+    - bug-fixer
+    - ui-designer
+    - test-engineer
+  custom: []  # custom 모드 시 직접 지정
+
+# 토큰 절약
+token_saving:
+  research_model: "sonnet"
+  execution_model: "opus"
+  max_parallel_agents: 3
+
+# 세션 프로토콜
+session:
+  auto_briefing: true
+  auto_journal: true
+  pipe_cross_link: true

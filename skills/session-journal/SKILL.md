@@ -5,6 +5,12 @@ description: 세션 종료 시 자동으로 옵시디언에 세션 요약/액션
 
 # session-journal 스킬
 
+## 의존성
+
+| 의존성 | 종류 | 필수 여부 | 설명 |
+|--------|------|----------|------|
+| Obsidian Vault | 파일시스템 | 필수 | `{OBSIDIAN_VAULT}` 경로 — Sessions/, Action Tracker.md, Decision Log.md, 01-Pipe/ 폴더 필요 |
+
 ## 역할
 매 세션 종료 시 자동으로 3곳에 기록하는 스킬.
 
